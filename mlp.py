@@ -29,13 +29,6 @@ if not hasattr(backend, "tf"):
 
 
 
-
-
-
-
-
-
-
 ###########################################################################
                             # DATA PREPROCESSING
 ###########################################################################
@@ -183,12 +176,6 @@ X_test_scaled = np.array(scaler.transform(X_test))
 
 
 
-
-
-
-
-
-
 ###########################################################################
                     # RESULTS ON CLEAN DATA
 ###########################################################################
@@ -310,9 +297,6 @@ print('Test accuracy on adversarial examples: %0.4f\n' % adv_accuracy)
 print('Elapsed time on FGSM : %0.4f\n' % elapsed_time_adv)
 
 
-
-
-
 ###########################################################################
     # Craft adversarial examples using Carlini and Wagner's approach
                     #adversarial test set on adv_x
@@ -401,10 +385,7 @@ elapsed_time_adv = time.time() - start_time_adv
 print('Test accuracy on adversarial examples: %0.4f\n' % adv_accuracy)
 print('Elapsed time on DeepFool : %0.4f\n' % elapsed_time_adv)
    
-        
-    
-
-
+     
 ###########################################################################
                     # Adversarial feature statistics
 ###########################################################################
