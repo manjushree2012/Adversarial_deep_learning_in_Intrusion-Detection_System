@@ -27,14 +27,6 @@ if not hasattr(backend, "tf"):
         raise RuntimeError("Requires keras to be configured to use the TensorFlow backend.")
 
 
-
-
-
-
-
-
-
-
 ###########################################################################
                             # DATA PREPROCESSING
 ###########################################################################
@@ -182,14 +174,6 @@ print("------ END OF DATA PREPROCESSING --------")
 ###########################################################################
 
 
-
-
-
-
-
-
-
-
 ###########################################################################
                     # RESULTS ON CLEAN DATA
 ###########################################################################
@@ -283,11 +267,6 @@ elapsed_time = time.time() - start_time
 print('Elapsed time on training : %0.4f\n' % elapsed_time)
 
 
-
-
-
-
-
 ###########################################################################
     # Craft adversarial examples using FGSM approach
     #cleverhans/cleverhans_tutorials/mnist_tutorial_keras_tf.py
@@ -324,9 +303,6 @@ adv_accuracy = model_eval(sess, x, y , predictions, X_test_adv, Y_test, args = e
 elapsed_time_adv = time.time() - start_time_adv
 print('Test accuracy on adversarial examples: %0.4f\n' % adv_accuracy)
 print('Elapsed time on FGSM : %0.4f\n' % elapsed_time_adv)
-
-
-
 
 
 ###########################################################################
@@ -375,9 +351,7 @@ elapsed_time_adv = time.time() - start_time_adv
 
 print('Test accuracy on C&W examples: %0.4f\n' % adv_accuracy)
 print('Elapsed time on C&W : %0.4f\n' % elapsed_time_adv)   
-        
-
-    
+          
 
 ###########################################################################
     # Craft adversarial examples using Deepfool approach
@@ -419,9 +393,6 @@ print('Test accuracy on adversarial examples: %0.4f\n' % adv_accuracy)
 print('Elapsed time on DeepFool : %0.4f\n' % elapsed_time_adv)
    
   
-    
-
-
 ###########################################################################
                     # Adversarial feature statistics
 ###########################################################################

@@ -27,8 +27,6 @@ np.random.seed(0)
 if not hasattr(backend, "tf"):
         raise RuntimeError("Requires keras to be configured to use the TensorFlow backend.")
 
-
-
 ###########################################################################
                             # DATA PREPROCESSING
 ###########################################################################
@@ -173,9 +171,6 @@ X_test_scaled = np.array(scaler.transform(X_test))
     # END OF DATA PREPROCESSING
 ###########################################################################
 
-
-
-
 ###########################################################################
                     # RESULTS ON CLEAN DATA
 ###########################################################################
@@ -251,12 +246,6 @@ print('Test accuracy on normal examples ' + str(accuracyNormal))
 
 elapsed_time = time.time() - start_time
 print('Elapsed time on training : %0.4f\n' % elapsed_time)
-
-
-
-
-
-
 
 
 ###########################################################################
@@ -343,7 +332,6 @@ elapsed_time_adv = time.time() - start_time_adv
 
 print('Test accuracy on C&W examples: %0.4f\n' % adv_accuracy)
 print('Elapsed time on C&W : %0.4f\n' % elapsed_time_adv)
- 
 
   
 ###########################################################################
